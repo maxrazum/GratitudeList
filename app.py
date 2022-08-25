@@ -14,7 +14,8 @@ app.secret_key = os.urandom(24)
 # Main route
 @app.route("/")
 def index():
-    return "<h1>Hello, world</h1>"
+    data = get_db()
+    return data[0]
 
 
 # Connect db to app
@@ -22,7 +23,11 @@ def get_db():
     db = getattr(g, '_database', None)
     if db is None:
         db = g._database = sqlite3.connect('gratitude_list.db')
-    return db
+        cursor = db.cursor()
+        cursor.execute("SELECT phrase FROM gratitudes")
+        all_data = cursor.fetchall()
+        all_data = [str(val[0]) for val in all_data]
+    return all_data
 
 
 # Terminate db connection
