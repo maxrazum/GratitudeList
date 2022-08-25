@@ -139,4 +139,4 @@ for i in range(len(gratitudes)):
     print("added", gratitudes[i])
 
 connection.commit()
-connection()
+connection.close()
