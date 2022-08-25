@@ -26,6 +26,20 @@ def add_items():
     return render_template("index.html", all_items=session["all_items"], random_items=session["random_items"])
 
 
+# Remove items route
+@app.route("/remove_items", methods=["POST"])
+def remove_items():
+    checked_boxes = request.form.getlist("check")
+
+    for item in checked_boxes:
+        if item in session["random_items"]:
+            idx = session["random_items"].index(item)
+            session["random_items"].pop(idx)
+            session.modified = True
+
+    return render_template("index.html", all_items=session["all_items"], random_items=session["random_items"])
+
+
 # Connect db to app
 def get_db():
     db = getattr(g, '_database', None)
