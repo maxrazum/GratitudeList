@@ -12,16 +12,18 @@ app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 # Main route
-@app.route("/")
+@app.route("/", methods=["POST", "GET"])
 def index():
-    all_items, random_items = get_db()
-    return render_template("index.html", all_items=all_items, random_items=random_items)
+    session["all_items"], session["random_items"] = get_db()
+    return render_template("index.html", all_items=session["all_items"], random_items=session["random_items"])
 
 
 # Add items route
 @app.route("/add_items", methods=["POST"])
 def add_items():
-    return request.form["select_items"]
+    session["random_items"].append(request.form["select_items"])
+    session.modified = True
+    return render_template("index.html", all_items=session["all_items"], random_items=session["random_items"])
 
 
 # Connect db to app
