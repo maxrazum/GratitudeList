@@ -10,9 +10,17 @@
 </head>
 
 <body>
-    {% for item in all_data %}
-    <p>{{ item }}</p>
-    {% endfor %}
+    <div id="add_item">
+        <form action="/add_items" method="POST">
+            <select name="select_items">
+                {% for item in all_data %}
+                <option value="{{ item }}">{{ item }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="ADD ITEM">
+        </form>
+    </div>
+
 </body>
 
 </html>

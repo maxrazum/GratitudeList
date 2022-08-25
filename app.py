@@ -18,6 +18,12 @@ def index():
     return render_template("index.html", all_data=data)
 
 
+# Add items route
+@app.route("/add_items", methods=["POST"])
+def add_items():
+    return request.form["select_items"]
+
+
 # Connect db to app
 def get_db():
     db = getattr(g, '_database', None)
