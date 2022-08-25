@@ -14,8 +14,8 @@ app.secret_key = os.urandom(24)
 # Main route
 @app.route("/")
 def index():
-    data = get_db()
-    return render_template("index.html", all_data=data)
+    all_items, random_items = get_db()
+    return render_template("index.html", all_items=all_items, random_items=random_items)
 
 
 # Add items route
@@ -36,7 +36,12 @@ def get_db():
         # Get the string value
         all_data = [str(val[0]) for val in all_data]
 
-    return all_data
+        # Randomly select 3 gratitude
+        random_list = all_data.copy()
+        random.shuffle(random_list)
+        random_list = random_list[:3]
+
+    return all_data, random_list
 
 
 # Terminate db connection
