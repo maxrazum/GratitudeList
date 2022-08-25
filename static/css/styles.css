@@ -1,0 +1,19 @@
+body {
+    background: #A5D56E;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    font-size: 3em;
+}
+
+label {
+    line-height: 3em;
+}
+
+#remove_items {
+    background-color: #CACACA;
+}
+
+#add_item {
+    background-color: #FDDDA7 ;
+}
+

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
     <title>Gratitude List</title>
 </head>
 
@@ -16,9 +18,9 @@
         <form action="/remove_items" method="POST">
             {% for item in random_items %}
             <input type="checkbox" name="check" id="{{ item }}" value="{{ item }}">
-            <label for="{{ item }}" name="{{ item }}">{{ item }}</label>
+            <label for="{{ item }}" name="{{ item }}">{{ item }}</label><br>
             {% endfor %}
-            <input type="submit" value="REMOVE ITEMS">
+            <input type="submit" value="CHECK ITEMS" id="remove_btn">
         </form>
     </div>
 
@@ -31,7 +33,7 @@
                 <option value="{{ item }}">{{ item }}</option>
                 {% endfor %}
             </select>
-            <input type="submit" value="ADD ITEM">
+            <input type="submit" value="ADD ITEM" id="add_btn">
         </form>
     </div>
 
