@@ -10,16 +10,16 @@ When life gets tough, it’s easy to forget what we have that’s going right.
 
 ## Demo
 ### In action
-<img href="./readme_img/action.gif" height="400">
+<img src="/readme_img/action.gif" height="400">
 
 ### Laptop
-<img href="./readme_img/laptop.jpg" height="400">
+<img src="/readme_img/laptop.jpg" height="400">
 
 ### Tablet
-<img href="./readme_img/tablet.jpg" height="400">
+<img src="/readme_img/tablet.jpg" height="400">
 
 ### Smartphone
-<img href="./readme_img/mobile.jpg" height="400">
+<img src="/readme_img/mobile.jpg" height="400">
 
 
 #### FRAMEWORKS
