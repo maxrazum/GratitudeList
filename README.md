@@ -1,9 +1,8 @@
 # GratitudeList
-## CS50 2022 | Final Project | Max Razum
-### [Video Demo](https://youtube.com)
+#### [Video Demo](https://youtu.be/oNnvlP-xNfc)
 
 
-## Overview
+## Description:
 
 When life gets tough, it’s easy to forget what we have that’s going right.
 
