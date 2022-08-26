@@ -1,19 +1,96 @@
+/* ---- Base Rules ---- */
 body {
-    background: #A5D56E;
-    font-family: "Nunito", sans-serif;
-    text-align: center;
+    background: linear-gradient(to top left, #5630B2, #CC7712);
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+}
+
+/* Typeography General*/
+h1 {
+    border-bottom: 1px solid #cc1;
+    font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
+    color: #fff;
 }
 
-label {
-    line-height: 3em;
+p {
+    line-height: 1.6em;
+    color: #eee;
 }
 
-#remove_items {
-    background-color: #CACACA;
+/* ---- Layout Rules ---- */
+main {
+    margin: 10vh 1em 10vh;
 }
 
-#add_item {
-    background-color: #FDDDA7 ;
+section {
+    position: relative;
+    min-height: 80vh;
 }
 
+/* ---- Module Rules ---- */
+/* Navigation Styles*/
+.navbar__menu ul {
+    padding-left: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.navbar__menu li {
+    display: inline-block;
+}
+
+.navbar__menu .menu__link {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar__menu .menu__link:hover {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+/* Header Styles */
+.page__header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* Footer Styles */
+.page__footer {
+    background: #000;
+    padding: 3em;
+    color: #fff;
+}
+
+.page__footer p {
+    color: #fff;
+}
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing__container {
+    padding: 1em;
+    text-align: left;
+}
+
+@media only screen and (min-width: 35em) {
+    .landing__container {
+        max-width: 50em;
+        padding: 4em;
+    }
+}
+
+section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+}
