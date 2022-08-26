@@ -18,7 +18,7 @@ gratitudes = [
     "Morning coffee for jolting you awake",
     "Libraries with endless books allowing you to learn",
     "Music that helps you feel",
-    "Tehe beauty of Mother nature",
+    "The beauty of Mother nature",
     "Today because you have been given it",
     "Art that mesmerizes you",
     "The comfort of your own home",

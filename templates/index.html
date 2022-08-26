@@ -13,29 +13,81 @@
 
 <body>
 
-    <!-- Remove items form -->
-    <div id="remove_items">
-        <form action="/remove_items" method="POST">
-            {% for item in random_items %}
-            <input type="checkbox" name="check" id="{{ item }}" value="{{ item }}">
-            <label for="{{ item }}" name="{{ item }}">{{ item }}</label><br>
-            {% endfor %}
-            <input type="submit" value="CHECK ITEMS" id="remove_btn">
-        </form>
-    </div>
+    <header class="page__header">
+        <nav class="navbar__menu">
+            <!-- Navigation starts as empty UL that will be populated with JS -->
+            <ul id="navbar__list"></ul>
+        </nav>
+    </header>
 
+    <main>
+        <section id="section1" data-nav="Section 2">
+            <div class="landing__container">
+                <h1>Gratitude List</h1>
 
-    <!-- Add items form -->
-    <div id="add_item">
-        <form action="/add_items" method="POST">
-            <select name="select_items">
-                {% for item in all_items %}
-                <option value="{{ item }}">{{ item }}</option>
-                {% endfor %}
-            </select>
-            <input type="submit" value="ADD ITEM" id="add_btn">
-        </form>
-    </div>
+                <!-- Add items form -->
+                <div id="add_item">
+                    <form action="/add_items" method="POST">
+                        <select name="select_items">
+                            {% for item in all_items %}
+                            <option value="{{ item }}">{{ item }}</option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" value="ADD NEW" id="add_btn">
+                    </form>
+                </div>
+
+                <!-- Remove items form -->
+                <div id="remove_items">
+                    <form action="/remove_items" method="POST">
+                        {% for item in random_items %}
+                        <input type="checkbox" name="check" id="{{ item }}" value="{{ item }}">
+                        <label for="{{ item }}" name="{{ item }}">{{ item }}</label><br>
+                        {% endfor %}
+                        <input type="submit" value="REMOVE SELECTED" id="remove_btn">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2" data-nav="Section 2" class="active-section">
+            <div class="landing__container">
+                <h1>What is it?</h1>
+                <p>A gratitude list is a compilation of things that you feel grateful for. It is important to create one
+                    each day to remember to look at the positive side of things. </p>
+
+                <p>A gratitude list helps people with anxiety, depression, or any struggle in life remember to never
+                    lose hope. Things do not always go as planned in life but even on your darkest days, there is always
+                    something to be grateful for.</p>
+            </div>
+        </section>
+
+        <section id="section3" data-nav="Section 3">
+            <div class="landing__container">
+                <h1>Benefits</h1>
+                <p>By practicing gratitude, you might realize you value different things than you realized. It can help
+                    you understand that maybe you actually want a secondary thing than what you think you want. </p>
+
+                <p>The gratitude list doesn’t allow your mind to get completely clouded by a negative event. It helps
+                    you remember that you don’t only have challenges in your life, you also have many things to be
+                    grateful for.</p>
+            </div>
+        </section>
+
+        <section id="section4" data-nav="Section 4">
+            <div class="landing__container">
+                <h1>When to Use ?</h1>
+                <p>Gratitude is most useful when you’re going through a tough time in your life such as when you lose
+                    someone or you’re going through a change. Feeling grateful is easy when you have a number of things
+                    you can reflect on from a gratitude list. It will give you perspective, remind you of the things you
+                    may forget about, and allow you to move to a positive mindset.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page__footer">
+        <p>&copy; 2022 MaxRazum</p>
+    </footer>
 
 </body>
 
