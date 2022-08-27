@@ -1,5 +1,5 @@
 # GratitudeList
-#### [Video Demo](https://youtu.be/oNnvlP-xNfc)
+#### [CS50 certificate](/readme_img/certificate.jpg)
 
 
 ## Description:
