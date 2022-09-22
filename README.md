@@ -55,7 +55,7 @@ py -3 -m venv .venv
 ```
 pip install Flask-Session
 ```
-4) Run the App:
+5) Run the App:
 ```
 python -m flask run
 ```
