@@ -1,10 +1,5 @@
 # GratitudeList
-#### [CS50 certificate](/readme_img/certificate.jpg)
-
-
-## Description:
-
-When life gets tough, it’s easy to forget what we have that’s going right.
+A full stack project that allows users to view gratitudes, add to the list of gratitudes and remove from the list.
 
 
 ## Demo
