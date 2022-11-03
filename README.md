@@ -1,6 +1,21 @@
 # GratitudeList
 A full stack project that allows users to view gratitudes, add to the list of gratitudes and remove from the list.
 
+#### LANGUAGES
+    - Python
+    - SQLite
+    - Javascript
+    - HTML
+    - CSS
+    
+#### FRAMEWORKS
+    - Flask (with Jinja2 template engine)
+
+#### LIBRARIES
+    - flask
+    - os
+    - sqlite3
+    - random
 
 ## Demo
 ### In action
@@ -14,24 +29,6 @@ A full stack project that allows users to view gratitudes, add to the list of gr
 
 ### Smartphone
 <img src="/readme_img/mobile.jpg" height="400" alt="responsive design">
-
-
-#### FRAMEWORKS
-    - Flask (with Jinja2 template engine)
-
-#### LANGUAGES
-    - Python
-    - SQLite
-    - Javascript
-    - HTML
-    - CSS
-
-#### LIBRARIES
-    - flask
-    - os
-    - sqlite3
-    - random
-
 
 ## Run it locally (written for Windows and VSCode)
 1) Create a directory and clone the repo in it:
